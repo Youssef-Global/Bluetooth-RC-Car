@@ -12,8 +12,6 @@ void MUART_voidInit(void);
 
 void MUART_voidSendChar(u8 Copy_u8Data);
 
-void MUART_voidSendString(char *Copy_u8String);
-
-u8 MUART_u8GetChar(void);
+u8 MUART_u8ReceiveChar(void);
 
 #endif /* MCAL_MUART_MUART_INTERFACE_H_ */

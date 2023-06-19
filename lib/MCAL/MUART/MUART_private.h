@@ -16,12 +16,18 @@
 #define UBRRL   (*(volatile u8 *)0x29)
 
 
+// UCSRB - UART Control and Status Register B
+#define RXEN    4
+#define TXEN    3
 
-#define NO_PARITY    1
-#define ENEV_PARITY  2
-#define ODD_PARITY   3
+// UCSRC - UART Control and Status Register C
+#define URSEL   7
+#define UCSZ0   2
+#define UCSZ1   1
 
-
-#define TRANSIMITTER
+// UCSRA - UART Control and Status Register A
+#define UDRE    5
+#define RXC     7
+#define TXC     8
 
 #endif /* MCAL_MUART_MUART_PRIVATE_H_ */
