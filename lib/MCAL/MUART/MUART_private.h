@@ -21,6 +21,7 @@
 #define TXEN    3
 #define RXCIE   7
 #define TXCIE   6
+#define UDRIE   5
 
 // UCSRC - UART Control and Status Register C
 #define URSEL   7

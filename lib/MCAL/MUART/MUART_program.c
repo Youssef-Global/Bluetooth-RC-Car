@@ -22,8 +22,9 @@ void MUART_voidInit(void)
 	// Enable RX
 	SET_BIT(UCSRB, RXEN);
 
-	/* Enable UART Interrupt receive*/
+	/* Enable UART Interrupt on receive*/
 	SET_BIT(UCSRB, RXCIE);
+	SET_BIT(UCSRB, UDRIE);
 	
 	/*Configure Frame Format
 	* 8 data bits, 1 stop bit, No Parity*/
