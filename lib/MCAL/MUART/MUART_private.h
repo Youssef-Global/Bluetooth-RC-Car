@@ -19,6 +19,8 @@
 // UCSRB - UART Control and Status Register B
 #define RXEN    4
 #define TXEN    3
+#define RXCIE   7
+#define TXCIE   6
 
 // UCSRC - UART Control and Status Register C
 #define URSEL   7
