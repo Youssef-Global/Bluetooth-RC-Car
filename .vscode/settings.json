@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "mdio_interface.h": "c",
+        "muart_interface.h": "c"
+    }
+}

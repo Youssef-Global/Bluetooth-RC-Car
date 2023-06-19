@@ -7,11 +7,11 @@
 
 #define F_CPU 8000000L
 
-#define Natural     1
-#define Reverse     2
-#define TurnLeft    3
-#define TurnRight   4
-#define Brake       5
+#define Natural     'F'
+#define Reverse     'B'
+#define TurnLeft    'L'
+#define TurnRight   'R'
+#define Brake       'S'
 
 #include "../lib/LIB/LIB_STD_TYPES.h"
 #include "../lib/LIB/LIB_BIT_MATH.h"
@@ -28,13 +28,12 @@ int main ()
 	MDIO_voidInit();
 	HDCMOTOR_voidInit();
 	MUART_voidInit();
-	u8 button = Brake;
+	u8 button = Natural;
 
 	while (1)
 	{
 
 	button = MUART_u8GetChar();
-	
 	switch (button)
 	{
 	case Natural:
