@@ -13,8 +13,6 @@
 #define TurnRight   'R'
 #define Brake       'S'
 
-#include <avr/io.h>
-#include <avr/interrupt.h>
 #include "../lib/LIB/LIB_STD_TYPES.h"
 #include "../lib/LIB/LIB_BIT_MATH.h"
 
@@ -23,7 +21,7 @@
 #include "../lib/MCAL/MUART/MUART_interface.h"
 #include "../lib/HAL/HDCMOTOR/HDCMOTOR_interface.h"
 
-volatile u8 button = 'S';
+volatile u8 button = Natural;
 
 int main ()
 {
@@ -32,7 +30,6 @@ int main ()
 	MGIE_voidGlobalEnable();
 	HDCMOTOR_voidInit();
 	MUART_voidInit();
-	UDR = 'S';
 
 	while (1)
 	{
@@ -56,10 +53,6 @@ int main ()
 		default:
 			break;
 		}
+		button= MUART_u8ReceiveChar();
 	}
-}
-
-ISR(USART_RXC_vect)
-{
-	button = UDR;
 }
